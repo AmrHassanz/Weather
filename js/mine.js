@@ -13,7 +13,6 @@ async function getWeather(city) {
   var myResponse = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=a682871a98554654bcf73801221601&q=${city}&days=7`);
   var data = await myResponse.json();
   allData = data;
-  console.log(allData)
 
   displayWeather();
   date();
