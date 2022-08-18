@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Weather</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css"> <!-- My CSS -->
+  <link href="css/all.min.css" rel="stylesheet"> <!-- font awesome -->
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-5 bg-1">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex flex-nowrap">
+        <div><img src="images/logo.png" class="w-100"></div>
+        <div>
+          <h1 class="site-title fs-6 fw-bold">Weather</h1>
+          <p class="site-description">tagline goes here</p>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active me-3 my-1" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3 my-1" aria-current="page">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3 my-1" aria-current="page">Live Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3 my-1" aria-current="page">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link my-1" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <div id="home" class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form class="find-location position-relative">
+            <input type="text" placeholder="Find your location..." id="search">
+            <input type="button" value="Find" id="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-5">
+      <div class="row g-0">
+
+        <div class="col-lg-4">
+          <div class="item text-center">
+            <div class="title d-flex justify-content-between p-2 bg-2">
+              <div id="day">Saturday</div>
+              <div id="date">15January</div>
+            </div>
+            <div class="box px-3 bg-3">
+              <div id="city" class="pt-4 fs-5">Cairo</div>
+              <div class="degree row align-items-center">
+                <div class="col-lg-12 col-md-6 num"><span id="temp">12</span><sup>o</sup>C</div>
+                <div class="col-lg-12 col-md-6"><img id="icon" src="images/116.png" class="w-50"></div>
+              </div>
+              <div class="custom pb-3" id="text">Partly cloudy</div>
+              <div class="pb-4">
+                <span class="me-3"><img src="images/icon-umberella.png"> <span class="text-white"
+                    id="humidity">20</span> %</span>
+                <span class="me-3"><img src="images/icon-wind.png"> <span class="text-white" id="speed">18</span>
+                  km/h</span>
+                <span><img src="images/icon-compass.png"> <span class="text-white" id="direction">East</span> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item text-center d-flex flex-column">
+            <div class="title d-flex justify-content-between p-2 bg-4">
+              <div id="tomorrow" class="mx-auto">Saturday</div>
+            </div>
+            <div class="box p-4 bg-3 flex-grow-1 bg-5 d-flex flex-column justify-content-center">
+              <div class="degree">
+                <div><img id="iconTomorrow" src="images/116.png" class="w-25" class=""></div>
+                <div class="mt-4 fs-1 fw-bold text-white"><span id="tempTomorrowMax">12</span><sup>o</sup>C</div>
+                <div class="mb-4 fs-5 fw-bold text-muted"><span id="tempTomorrowMin">12</span><sup>o</sup>C</div>
+              </div>
+              <div class="custom" id="textTomorrow">Partly cloudy</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item text-center d-flex flex-column">
+            <div class="title d-flex justify-content-between p-2 bg-2">
+              <div id="afterTomorrow" class="mx-auto">Saturday</div>
+            </div>
+            <div class="box p-4 bg-3 flex-grow-1 d-flex flex-column justify-content-center">
+              <div class="degree">
+                <div><img id="iconAfterTomorrow" src="images/116.png" class="w-25" class=""></div>
+                <div class="mt-4 fs-1 fw-bold text-white"><span id="tempAfterTomorrowMax">12</span><sup>o</sup>C</div>
+                <div class="mb-4 fs-5 fw-bold text-muted"><span id="tempAfterTomorrowMin">12</span><sup>o</sup>C</div>
+              </div>
+              <div class="custom" id="textAfterTomorrow">Partly cloudy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="container">
+      <div class="row py-5 align-items-center">
+        <div class="col-lg-7">
+          <form class="find-location position-relative">
+            <input type="text" placeholder="Enter your email to subscribe..." id="email">
+            <input type="button" value="Subscribe" id="subscribe">
+          </form>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          <div class="social-icons d-flex justify-content-center align-items-center my-3">
+            <div class="ico d-flex align-items-center justify-content-center me-2"><i
+                class="fab fa-facebook-f fs-5"></i></div>
+            <div class="ico d-flex align-items-center justify-content-center me-2"><i class="fab fa-twitter fs-5"></i>
+            </div>
+            <div class="ico d-flex align-items-center justify-content-center me-2"><i class="fab fa-google fs-5"></i>
+            </div>
+            <div class="ico d-flex align-items-center justify-content-center me-2"><i
+                class="fab fa-pinterest-p fs-5"></i></div>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center justify-content-lg-start">
+          <p class="m-2">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap -->
+    <script src="js/mine.js"></script> <!-- mine -->
+
+</body>
+
+</html>
